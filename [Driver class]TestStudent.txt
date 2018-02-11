@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package TestHomework;
+
+import Homework.Subject;
+import Homework.PassedStd;
+import Homework.FailedStd;
+
+public class TestSubject {
+
+    public static void main(String[] args) {
+        boolean reward=false;
+        
+        
+        Subject subject1 = new Subject("INT102","Computer programming",3);
+        System.out.println(subject1.toString());
+        
+        PassedStd std1 = new PassedStd("INT102","Computer programming",3,"Student a",3.5,80,true);
+        System.out.println(std1.toString());
+        reward = std1.rewardForMax();
+        if(reward == true){
+        System.out.println("\nCongratulation!!! This student get the reward\n");
+        }else{
+            System.out.println("Unfortunately , this student doesn't get the reward");
+        }
+        
+        FailedStd std2 = new FailedStd("INT102","Computer programming",3,"Student b",30);
+        System.out.println(std2.toString());
+        
+        
+        
+        
+        
+    }
+
+}
